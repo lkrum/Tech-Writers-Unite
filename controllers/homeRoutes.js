@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const { Post, User } = require('../models');
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all posts and JOIN with user data
     const postData = await Post.findAll({
       include: [
         {
@@ -16,13 +16,17 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
+if (posts) {
 
+}
     // Pass serialized data and session flag into template
+    console.log(posts, req.session.logged_in)
     res.render('homepage', { 
       posts, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
@@ -39,8 +43,9 @@ router.get('/posts/:id', async (req, res) => {
     });
 
     const posts = postData.get({ plain: true });
-
-    res.render('project', {
+    
+// name of handlebar template
+    res.render('post', {
       ...posts,
       logged_in: req.session.logged_in
     });
@@ -50,7 +55,8 @@ router.get('/posts/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/posts', withAuth, async (req, res) => {
+//  withAuth
+router.get('/posts', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
