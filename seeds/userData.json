@@ -1,17 +1,17 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "name": "Joe",
+    "email": "joe@hotmail.com",
+    "password": "password123"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "name": "Taylor",
+    "email": "tswift@gmail.com",
+    "password": "dramaqueen89"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "name": "Becky",
+    "email": "noitsbecky0@aol.com",
+    "password": "whoistaylorswiftanyway"
   }
 ]
