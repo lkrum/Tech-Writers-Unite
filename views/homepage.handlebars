@@ -6,12 +6,8 @@
       <tr>
     <td><a href="/post/{{post.id}}">{{post.title}}</a>
     <p>Posted by {{post.author_username}} on {{format_date post.date_created}}</p></td>
+    <td>{{post.content}}</td>
    </tr>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{post.description}}
-    </p>
   </div>
 </div>
 {{/each}}

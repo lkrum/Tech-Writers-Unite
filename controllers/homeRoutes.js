@@ -20,7 +20,6 @@ if (posts) {
 
 }
     // Pass serialized data and session flag into template
-    console.log(posts, req.session.logged_in)
     res.render('homepage', { 
       posts, 
       logged_in: req.session.logged_in 
@@ -44,7 +43,7 @@ router.get('/posts/:id', async (req, res) => {
 
     const posts = postData.get({ plain: true });
     
-// name of handlebar template
+// post = name of handlebar template
     res.render('post', {
       ...posts,
       logged_in: req.session.logged_in

@@ -19,9 +19,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // content: {
-    //   type: DataTypes.STRING,
-    // },
+    content: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -29,6 +30,13 @@ Post.init(
     },
     comments: {
       type: DataTypes.STRING,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
