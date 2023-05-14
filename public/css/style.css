@@ -2,6 +2,38 @@ header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
+.header {
+  background-color: #d4c5e1;
+  padding: 20px;
+}
+
+.header h1 {
+background-color: #7d3483;
+padding: 10px;
+border-radius: 10px;
+box-shadow: #5d2461 7px 7px ;
+}
+
+nav a {
+padding: 50px;
+font-size: 20px;
+}
+
+.header a {
+  color: black;
+}
+
+body {
+  background-color: #f1eef4;
+}
+
+tr {
+  /* background-color: #efbaf3; */
+  padding: 10px;
+  max-width: auto;
+  font-size: 20px;
+}
+
 .no-button {
   background: none;
   border: none;
