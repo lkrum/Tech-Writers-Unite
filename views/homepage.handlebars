@@ -3,11 +3,24 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <table>
+      {{#if logged_in}}
       <tr>
-    <td><a href="/post/{{post.id}}">{{post.title}}</a>
-    <p>Posted by {{post.author_username}} on {{format_date post.date_created}}</p></td>
-    <td>{{post.content}}</td>
-   </tr>
+        <td>
+          <a href="/posts/{{post.id}}">{{post.title}}</a>
+          <p>Posted by {{post.author_username}} on {{format_date post.date_created}}</p>
+        </td>
+        <td>{{post.content}}</td>
+      </tr>
+      {{else}}
+      <tr>
+        <td>
+          <a href="/login/{{post.id}}">{{post.title}}</a>
+        <p>Posted by {{post.author_username}} on {{format_date post.date_created}}</p>
+        </td>
+        <td>{{post.content}}</td>
+      </tr>
+      {{/if}}
+
   </div>
 </div>
 {{/each}}

@@ -16,13 +16,13 @@
         <a href="/">Tech Writers Unite</a>
       </h1>
       <nav>
-        <a href="/homepage">Home</a>
-        <a href="/dashboard">Dashboard</a>
+        <a href="/">Home</a>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">Profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/dashboard">Dashboard</a>
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
+        <a href="/login">Dashboard</a>
         <a href="/login">Login</a>
         {{/if}}
       </nav>
