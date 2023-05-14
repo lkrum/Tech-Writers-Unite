@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
+// stores session information in the database
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -17,7 +18,8 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 300000,
+    // cookie max age is
+    maxAge: 24 * 60 * 60 *1000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',
