@@ -7,7 +7,7 @@
       <tr>
         <td>
           <a href="/posts/{{post.id}}">{{post.title}}</a>
-          <p>Posted by {{post.author_username}} on {{format_date post.date_created}}</p>
+          <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </td>
         <td>{{post.content}}</td>
       </tr>
@@ -15,7 +15,7 @@
       <tr>
         <td>
           <a href="/login/">{{post.title}}</a>
-        <p>Posted by {{post.author_username}} on {{format_date post.date_created}}</p>
+        <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </td>
         <td>{{post.content}}</td>
       </tr>

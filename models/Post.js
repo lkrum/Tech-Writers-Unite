@@ -15,21 +15,14 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    author_username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     content: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     date_created: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
       defaultValue: DataTypes.NOW,
-    },
-    comments: {
-      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,

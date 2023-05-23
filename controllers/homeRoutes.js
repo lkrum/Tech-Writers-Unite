@@ -32,13 +32,13 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
-if (posts) {
+    if (posts) {
 
-}
+    }
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      posts, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      posts,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log(err)
@@ -58,8 +58,8 @@ router.get('/posts/:id', async (req, res) => {
     });
 
     const posts = postData.get({ plain: true });
-    
-// post = name of handlebar template
+
+    // post = name of handlebar template
     res.render('post', {
       ...posts,
       logged_in: req.session.logged_in
@@ -92,10 +92,10 @@ router.get('/dashboard', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/posts');
+    res.redirect('/dashboard');
     return;
   }
-// if user is not logged in already, direct to login page
+  // if user is not logged in already, direct to login page
   res.render('login');
 });
 

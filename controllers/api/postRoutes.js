@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
+  console.log("YA GOT ME")
   try {
     const newPost = await Post.create({
       ...req.body,
@@ -13,6 +14,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 router.put('/:id', async (req, res) => {
   // update a post by its `id` value
