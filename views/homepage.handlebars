@@ -1,26 +1,20 @@
 <!-- Loop over each object in the posts array -->
-{{#each posts as |post| }}
+{{#each posts as |post|}}
 <div class="row mb-4 post">
   <div class="col-md-5">
     <table>
-      {{#if logged_in}}
       <tr>
         <td>
+          {{!-- TA Ian Darland helped me get the logged in conditional to work by adding the ../ before logged_in --}}
+          {{#if ../logged_in}}
           <a href="/posts/{{post.id}}">{{post.title}}</a>
+          {{else}}
+          <a href="/login/">{{post.title}}</a>
+          {{/if}}
           <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </td>
         <td>{{post.content}}</td>
       </tr>
-      {{else}}
-      <tr>
-        <td>
-          <a href="/login/">{{post.title}}</a>
-        <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
-        </td>
-        <td>{{post.content}}</td>
-      </tr>
-      {{/if}}
-
   </div>
 </div>
 {{/each}}
