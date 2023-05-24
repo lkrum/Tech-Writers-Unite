@@ -18,7 +18,7 @@ OR
 3. Install node by copying and pasting the code `npm init -y` in your terminal
 4. Run `npm i` to install the necessary applications 
 5. Create a .env file with the following information, using your MySQL password:\
-`DB_NAME='ecommerce_db'
+`DB_NAME='techBlog_db'
 DB_USER='root'
 DB_PW='YOURPASSWORD'`
 
