@@ -9,7 +9,7 @@
           {{#if ../logged_in}}
           <a href="/posts/{{post.id}}">{{post.title}}</a>
           {{else}}
-          <a href="/login/">{{post.title}}</a>
+          <a href="/login">{{post.title}}</a>
           {{/if}}
           <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </td>

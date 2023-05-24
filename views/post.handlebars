@@ -1,14 +1,39 @@
-<div class="text-center">
+<div class="text-left">
   <h2>{{title}}</h2>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p>{{content}}</p>
 </div>
 <section>
-  
-  <div class="comments">
-  <form>
-  <input type="text">
-  </form> 
-  </div>
-  <button>Submit</button> 
-</section>
+
+
+  <div class="col-md-4">
+    <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+    </td>
+    <td>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-light" data-id="{{post.id}}">UPDATE</button>
+
+
+        <br><br><br>
+        <section>
+          <h4 style="text-align: left;">Comments:</h4>
+          <div>
+            <div class="col-12">
+              <table style="width:100%" border="1px #black">
+                <tr>
+                  <th>Comment</th>
+                  <th>User</th>
+                </tr>
+                <tr id="comments">
+
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="comments">
+            <form id="commentForm">
+              <input type="text" id="input">
+            </form>
+            <button id="commentBtn">Submit</button>
+          </div>
+        </section>

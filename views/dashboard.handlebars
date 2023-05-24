@@ -5,7 +5,7 @@
 </div>
 
 <div class="row mt-4">
-  <div class="col-5">
+  <div class="col-4">
     <h3>Create a New Post:</h3>
 
     <form class="form new-post-form">
@@ -14,7 +14,7 @@
         <input class="form-input" type="text" id="post-name" name="post-name" />
       </div>
       <div class="form-group">
-        <label for="post-desc">Description:</label>
+        <label for="post-desc">Content:</label>
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
       <div class="form-group">
@@ -26,18 +26,43 @@
 <h3>Recent Posts:</h3>
 <section>
 <div>
-  <div class="col-12">
+  <div class="post-list col-7">
       <table style="width:100%" border="1px #black">
         <th>Post Title</th>
         <th>Date Created</th>
+        <th colspan="2">Actions</th>
 <!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
         <tr>
         <td><a href="/posts/{{post.id}}">{{post.title}}</a></td>
         <td>{{format_date post.date_created}}</td>
+      <td>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+        </td>
+        <td>
+          <div class="col-md-4">
+            <button class="btn btn-sm btn-light" id="updateBtn" data-id="{{post.id}}">UPDATE</button>
+        </td>
       </tr>
+      </div>
   </div>
 </div>
 {{/each}}
+
+{{!-- <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <h3>Edit Post</h3>
+    <span class="close">&times;</span>
+    <table>
+      <h4>Title</h4>
+      <textarea>post title</textarea>
+      <h4>Content</h4>
+      <textarea>some content</textarea>
+    </table>
+  </div> --}}
 
 <script src="/js/dashboard.js"></script>

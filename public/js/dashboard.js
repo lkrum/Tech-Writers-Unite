@@ -41,6 +41,25 @@ document
   .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('.post-list')
-//   .addEventListener('click', delButtonHandler);
+document
+  .querySelector('.post-list')
+  .addEventListener('click', delButtonHandler);
+
+  // functionality for updating posts 
+  const updateButtonHandler = async (event) => {
+  if (event.target.hasAttribute('updateBtn')) {
+    const id = event.target.getAttribute('updateBtn');
+
+    const response = await fetch(`/api/posts/${id}`, {
+      method: 'UPDATE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to update post');
+    }
+  }
+};
+
+document.querySelector('#updateBtn').addEventListener('click', updateButtonHandler);
