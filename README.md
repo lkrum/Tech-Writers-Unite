@@ -3,13 +3,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-I created a blogging app to give developers a platform to write, publish, and comment on articles. The app requires users to log in to view their user dashboard and see and comment on posts. Once logged in, users can edit, update, or delete their posts as well as leave comments on other users' posts.
+I created a blogging app to give developers a platform to write, publish, and comment on articles. The app requires users to log in to view their user dashboard, view posts and comments, and add posts and comments. Users are also able to edit and delete their own posts.
 
-This project was extremely challenging, partly because I was building this app from scratch, and partly because it was the first time I used Handlebars outside of small class activities. I was also writing my own routes for one of the first times, and I'm still a bit confused on how to do that successfully.
+This project was extremely challenging, partly because I was building this app from scratch, and partly because it was the first time I used Handlebars outside of small class activities. I was also writing my own routes for one of the first times.
 
 Link to video demo:
 
-![Preview image](./assets/preview.png)
+![Preview image](./public/images/preview.png)
 
 ## Installation
 1. Copy the SSH key in my GitHub repo and paste `git clone <SSHKEY>` in your terminal to create a local copy on your computer\

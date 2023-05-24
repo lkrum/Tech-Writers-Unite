@@ -5,7 +5,7 @@
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
+  <div class="col-5">
     <h3>Create a New Post:</h3>
 
     <form class="form new-post-form">
@@ -22,5 +22,22 @@
       </div>
     </form>
   </div>
+
+<h3>Recent Posts:</h3>
+<section>
+<div>
+  <div class="col-12">
+      <table style="width:100%" border="1px #black">
+        <th>Post Title</th>
+        <th>Date Created</th>
+<!-- Loop over each object in the posts array -->
+{{#each posts as |post| }}
+        <tr>
+        <td><a href="/posts/{{post.id}}">{{post.title}}</a></td>
+        <td>{{format_date post.date_created}}</td>
+      </tr>
+  </div>
+</div>
+{{/each}}
 
 <script src="/js/dashboard.js"></script>
