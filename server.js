@@ -21,7 +21,7 @@ app.set('view engine', 'handlebars');
 const PORT = process.env.PORT || 3001;
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.SECRET,
   cookie: {
     // cookie max age is
     maxAge: 24 * 60 * 60 *1000,
