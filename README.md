@@ -7,9 +7,9 @@ I created a blogging app to give developers a platform to write, publish, and co
 
 This project was extremely challenging, partly because I was building this app completely from scratch, and partly because it was the first time I used Handlebars and fetch requests outside of small class activities. I was also writing my own routes for one of the first times.
 
-Link to video demo:
+Link to deployed app: https://tech-writers-unite.herokuapp.com/
 
-![Preview image](./public/images/preview.png)
+![Preview](./public/images//Tech%20Writers%20Unite.gif)
 
 ## Installation
 1. Copy the SSH key in my GitHub repo and paste `git clone <SSHKEY>` in your terminal to create a local copy on your computer\
